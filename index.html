@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Agora</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Fonte do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+ <!-- Awesome Fonte -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/js/script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">     <!--Container todo--> 
+        <div class="form">      <!--Formulário-->
+            <h3>Confira o clima de uma cidade:</h3> <!--Título -->
+            <div class="form-input-container"> <!--Input de busca da cidade-->
+                <input type="text" placeholder="Digite o nome da cidade" id="city-input">
+                <button id="search"> <!--Botão de pesquisa-->
+                    <i class="fa-solid fa-magnifying-glass"></i>  <!--Icone de lupa // awesome fonte API-->
+                </button>
+            </div>
+        </div>
+        <div id="weather-data" class="hide"> <!--Informações de busca-->
+            <h2>
+                <i class="fa-solid fa-location-dot"></i> <!--Icone de localização-->
+                <span id="city"></span> <!--nome da cidade-->
+                <img src="" alt="Bandeira do país"  id="country"/> <!--imagem pais-->
+            </h2> 
+            <p id="temperature"><span></span>&deg;C</p> <!--clima-->
+            <div id="description-container"> <!--div descrição de tempo-->
+                <p id="description"></p> <!--tempo-->
+                <img src="" alt="Condições do tempo" id="weather-icon"> <!--imagem da condição de tempo-->
+            </div>
+            <div id="details-container"> <!--detalhes container-->
+                <p id="humidity"> <!--paragrafo de umidade-->
+                    <i class="fa-solid fa-droplet"></i> <!--icone de umidade-->
+                    <span></span> 
+                </p>
+                <p id="wind"> <!--ventos-->
+                    <i class="fa-solid fa-wind"></i> <!--icone ventos-->
+                    <span></span> 
+                </p>
+            </div>
+        </div>
+        <div id="error-message" class="hide">
+            <p>Não foi possível encontrar o clima de uma cidade com este nome.</p>
+        </div>
+        <div id="loader" class="hide">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div id="suggestions">
+            <button id="paris">Paris</button>
+            <button id="nova york">Nova York</button>
+            <button id="londres">Londres</button>
+            <button id="veneza">Veneza</button>
+            <button id="vancouver">Vancouver</button>
+            <button id="barcelona">Barcelona</button>
+            <button id="cidade do cabo">Cidade do Cabo</button>
+            <button id="san francisco">San Francisco</button>
+          </div>
+    </div>
+
+</body>
+</html>
